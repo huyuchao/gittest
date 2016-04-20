@@ -1,3 +1,0 @@
-clone add
-insert  开始编辑
-esc 退出编辑模式，输入命令 :X :q :w等关闭vim
