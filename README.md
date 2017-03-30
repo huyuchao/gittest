@@ -12,6 +12,9 @@ vim   点击insert 开始输入内容，点击esc 输入命令，保存退出。
 touch <name> 创建文件
 
 ------------------------------------
+
+git clone https://github.com/huyuchao/Study_Yii.git master
+
 git init  生成库
 
 git add  <name> 添加文件
