@@ -13,6 +13,18 @@ touch <name> 创建文件
 
 ------------------------------------
 
+当我们操作github或者gitlab上的项目时，我们需要身份证明也就是SSH Key。
+1，每次操作带上我们的用户名和密码
+2，在本地保存一份key，在github或者gitlab上配置一个key
+
+操作步骤：
+1，打开git bash，输入命令ls -al ~/.ssh
+2，ssh-keygen -t rsa -C "xxxx@xxxxxx.com"
+3,C:\Users\Administrator\.ssh 目录下打开id_rsa.pub文件，并且复制全部内容
+4，在你的gitlab或者github的账户，打开SSH key标签
+5，add you key
+
+
 git clone https://github.com/huyuchao/Study_Yii.git master
 
 git init  生成库
