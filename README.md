@@ -13,16 +13,16 @@ touch <name> 创建文件
 
 ------------------------------------
 
-当我们操作github或者gitlab上的项目时，我们需要身份证明也就是SSH Key。
-1，每次操作带上我们的用户名和密码
-2，在本地保存一份key，在github或者gitlab上配置一个key
+当我们操作github或者gitlab上的项目时，我们需要身份证明也就是SSH Key。<br>
+1，每次操作带上我们的用户名和密码<br>
+2，在本地保存一份key，在github或者gitlab上配置一个key<br>
 
-操作步骤：
-1，打开git bash，输入命令ls -al ~/.ssh
-2，ssh-keygen -t rsa -C "xxxx@xxxxxx.com"
-3,C:\Users\Administrator\.ssh 目录下打开id_rsa.pub文件，并且复制全部内容
-4，在你的gitlab或者github的账户，打开SSH key标签
-5，add you key
+操作步骤：<br>
+1，打开git bash，输入命令ls -al ~/.ssh<br>
+2，ssh-keygen -t rsa -C "xxxx@xxxxxx.com"<br>
+3,C:\Users\Administrator\.ssh 目录下打开id_rsa.pub文件，并且复制全部内容<br>
+4，在你的gitlab或者github的账户，打开SSH key标签<br>
+5，add you key<br>
 
 
 git clone https://github.com/huyuchao/Study_Yii.git master
@@ -104,13 +104,21 @@ vim .git/info/exclude 编辑忽略内容
 build/        忽略所有build目录下的文件，但如果是名为build的文件则不忽略<br>
 doc/*.txt     忽略文件如doc/notes.txt，但是文件如doc/server/arch.txt不忽略<br>
 
+-----------------------------------------------------------------------------
+遇到的问题：
+The authenticity of host *** can’t be established  本地电脑key有变化<br>
+
+修改/etc/ssh/ssh_config文件（或$HOME/.ssh/config）中的配置，添加如下两行配置：<br>
+StrictHostKeyChecking no<br>
+UserKnownHostsFile /dev/null<br>
+
+修改好配置后，重新启动sshd服务即可，命令为：/etc/init.d/sshd restart （或 service sshd restart ）
 
 
-
-换行符windows和linux不一致
-warning: LF will be replaced by CRLF in test.txt.
-解决方法：
-git config --global core.autocrlf false   自动换行转换取消
+换行符windows和linux不一致<br>
+warning: LF will be replaced by CRLF in test.txt.<br>
+解决方法：<br>
+git config --global core.autocrlf false   自动换行转换取消<br>
 
 
 git push 每次都要输入用户名和密码：
