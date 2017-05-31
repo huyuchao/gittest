@@ -145,7 +145,55 @@ git config --global gui.encoding utf-8
 git config --global i18n.commitencoding utf-8
 
 
+-------------------------------------------------------------------
 
+克隆svn版本库的全部内容
+
+    git svn clone <svn repository>
+
+克隆具有标准结构的svn版本库
+
+    git svn clone –s <svn repository>
+
+克隆非标准结构的svn版本库
+
+    git svn clone –T <trunk path>\
+
+                       -b <branch path>\
+
+                      -t <tag path>\
+
+                      <svn repository>
+
+克隆具有标准结构的svn版本库中的某个版本
+
+    git svn clone –s –r 1111
+
+克隆具有标准结构的svn版本库，并对svn中的分支添加前缀
+
+    git svn clone –s –prefix svn/<svn repository>
+
+从上游svn版本库中获得更新的内容，并依稀在本地git版本库中编辑本地分支
+
+    git svn rebase
+
+把修改变化退回上游的svn版本库
+
+    git svn dcommit
+
+列出所有将推出上游svn版本库的提交
+
+    git svn dcommit –n
+
+显示svn历史记录
+
+    git svn log
+
+显示文件中哥哥部分的svn的修改者及相关提交信息
+
+    git svn blame <some file>
+
+上面就是将svn迁移git的过程。
 
 
 
