@@ -43,6 +43,12 @@ git commit -a 提交全部修改文件 会打开一个vim编辑提交信息
 
 git commit -a -m "msg"  提交全部修改文件
 
+git rm 我的文件
+
+git rm -r 我的文件夹
+此处-r表示递归所有子目录，如果你要删除的，是空的文件夹，此处可以不用带上-r
+
+----------------------------------------------------------------------------------
 
 git remote add gittest https://github.com/huyuchao/gittest.git     添加远程仓库
 gittest 是别名
@@ -51,8 +57,9 @@ gittest 是别名
 
 git rename oldname newname 修改别名
 
-
 git push gittest master  将本地代码提交到远程服务器
+
+----------------------------------------------------------------------------------
 
 如果远程代码被修改，会有如下错误:
 error: failed to push some refs to 'https://github.com/huyuchao/gittest.git'
