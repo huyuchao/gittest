@@ -154,6 +154,15 @@ git config --global i18n.commitencoding utf-8
 
 -------------------------------------------------------------------
 
+
+    /trunk：开发主线，相当于Git中的Master分支。
+
+    /branches：支线副本，相当于Git中的其余分支。
+
+    /tags：标签，与Git中的标签一样。
+
+
+
 克隆svn版本库的全部内容
 
     git svn clone <svn repository>
