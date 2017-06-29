@@ -11,6 +11,20 @@ vim   点击insert 开始输入内容，点击esc 输入命令，保存退出。
 
 touch <name> 创建文件
 
+git merge合并策略：
+
+git merge-ours
+合并使用本地版本，抛弃他人版本。参见 git merge 的ours合并策略
+
+git merge-recursive
+针对两个分支的三向合并。参见 git merge 的recursive合并策略
+
+git merge-resolve
+针对两个分支的三向合并。参见 git merge 的resolve合并策略
+
+git merge-subtree
+子树合并。参见 git merge 的 subtree 合并策略
+
 ------------------------------------
 
 当我们操作github或者gitlab上的项目时，我们需要身份证明也就是SSH Key。<br>
