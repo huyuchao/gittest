@@ -11,7 +11,7 @@ vim   点击insert 开始输入内容，点击esc 输入命令，保存退出。
 
 touch <name> 创建文件
 
-git merge合并策略：
+git merge合并策略：  这四种都是直接合并代码，并不能合并某一次的提交
 
 git merge-ours
 合并使用本地版本，抛弃他人版本。参见 git merge 的ours合并策略
@@ -24,6 +24,11 @@ git merge-resolve
 
 git merge-subtree
 子树合并。参见 git merge 的 subtree 合并策略
+
+
+git cherry-pick 4da2f54  合并某一次的提交到当前分支   4da2f54为提交的commit_id值
+
+
 
 ------------------------------------
 
