@@ -25,11 +25,15 @@ git merge-resolve
 git merge-subtree
 子树合并。参见 git merge 的 subtree 合并策略
 
+合并单个commit
+
 <font color="red">
 git cherry-pick 4da2f54  合并某一次的提交到当前分支   4da2f54为提交的commit_id值<br/>
 git cherry-pick --no-commit  4da2f54   合并但不自动提交
 </font>
 
+合并多个连续的commit，格式：git cherry-pick A..B     合并从A到B  commit的内容<br/>
+git cherry-pick --no-commit  956946f..da0e179
 
 
 ------------------------------------
