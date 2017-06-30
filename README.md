@@ -32,8 +32,13 @@ git cherry-pick 4da2f54  合并某一次的提交到当前分支   4da2f54为提
 git cherry-pick --no-commit  4da2f54   合并但不自动提交
 </font>
 
-合并多个连续的commit，格式：git cherry-pick A..B     合并从A到B  commit的内容<br/>
-git cherry-pick --no-commit  956946f..da0e179
+合并多个连续的commit，格式：1,git cherry-pick A..B  &nbsp;&nbsp;&nbsp;&nbsp;2,git cherry-pick A^..B  
+1，
+git cherry-pick A..B 合并从A到B  commit的内容（不包含A）<br/>
+git cherry-pick --no-commit  956946f..da0e179<br/>
+2，
+git cherry-pick A^..B  合并从A到B  commit的内容（包含A）<br/>
+git cherry-pick --no-commit  956946f^..da0e179<br/>
 
 
 ------------------------------------
